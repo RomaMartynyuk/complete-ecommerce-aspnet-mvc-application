@@ -1,8 +1,8 @@
-﻿@model IEnumerable<Actor>
+﻿@model IEnumerable<Producer>
 
 @{
-    ViewData["Title"] = "List of Actors";
-} 
+    ViewData["Title"] = "List of Producers";
+}
 
 <div class="row">
     <div class="col-md-5 offset-md-2">
@@ -21,7 +21,7 @@
                 {
                     <tr class="text-center">
                         <td class="align-middle">
-                            <img class="rounded-circle" src="@item.ProfilePictureURL" alt="@item.FullName" style="max-width: 200px; max-height: 200px"/>
+                            <img class="rounded-circle" src="@item.ProfilePictureURL" alt="@item.FullName" style="max-width: 200px; max-height: 200px" />
                         </td>
                         <td class="align-middle">
                             @Html.DisplayFor(modelItem => item.FullName)

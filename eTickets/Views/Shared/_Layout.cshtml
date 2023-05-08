@@ -24,19 +24,22 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Movies" asp-action="Index"><i class="badge-info bi-film"></i>Movies</a>
                         </li>
                         
-                        <li class="nav-item dropdown flex-grow-1">
+                        @if(User.Identity.IsAuthenticated && User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item dropdown flex-grow-1">
                             
-                            <div class="dropdown">
-                                <a type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-gear"></i>Management</a>
+                                <div class="dropdown">
+                                    <a type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="bi bi-gear"></i>Management</a>
                                 
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" asp-controller="Cinemas" asp-action="Index">Cinemas</a></li>
-                                    <li><a class="dropdown-item" asp-controller="Producers" asp-action="Index">Producers</a></li>
-                                    <li><a class="dropdown-item" asp-controller="Actors" asp-action="Index">Actors</a></li>
-                                </ul>
-                            </div>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" asp-controller="Cinemas" asp-action="Index">Cinemas</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Producers" asp-action="Index">Producers</a></li>
+                                        <li><a class="dropdown-item" asp-controller="Actors" asp-action="Index">Actors</a></li>
+                                    </ul>
+                                </div>
 
-                        </li>
+                            </li>
+                        }
                     </ul>
 
                     <form class="form-inline row" asp-controller="Movies" asp-action="Filter" style="padding-right: 25px;">

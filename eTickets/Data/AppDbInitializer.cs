@@ -180,42 +180,42 @@ namespace eTickets.Data
                         new Actor_Movie()
                         {
                             ActorId = 1,
-                            MovieId = 5
+                            MovieId = 1
                         },
                         new Actor_Movie()
                         {
                             ActorId = 1,
-                            MovieId = 7
+                            MovieId = 3
                         },
                         new Actor_Movie()
                         {
                             ActorId = 1,
-                            MovieId = 8
+                            MovieId = 4
                         },
                         new Actor_Movie()
                         {
                             ActorId = 2,
-                            MovieId = 6
+                            MovieId = 1
                         },
                         new Actor_Movie()
                         {
                             ActorId = 2,
-                            MovieId = 5
+                            MovieId = 2
                         },
                         new Actor_Movie()
                         {
                             ActorId = 3,
-                            MovieId = 9
+                            MovieId = 5
                         },
                         new Actor_Movie()
                         {
                             ActorId = 4,
-                            MovieId = 9
+                            MovieId = 5
                         },
                         new Actor_Movie()
                         {
                             ActorId = 5,
-                            MovieId = 5
+                            MovieId = 1
                         },
                     });
                     context.SaveChanges();

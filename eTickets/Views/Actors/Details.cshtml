@@ -7,35 +7,35 @@
 <div class="row text">
     <div class="col md-8 offset-2" style="margin-top: 150px">
         <p>
-            <h1>Details for @Model.FullName</h1>
+            <h1 class="text-white text-center">Details for @Model.FullName</h1>
         </p>
         <div class="row" style="margin-top:100px">
             <div class="col text-left">
-                <img id="ProfilePicturePreview" style="height: 240px; width: 170px;" />
+                <img id="ProfilePicturePreview" class="rounded-circle" style="border: #ffc107 5px solid; width: 200px; height: 250px;" />
             </div>
             <div class="row col-10">
                 <div class="col-md-8 offset-2">
                         <div class="form-group">
-                            <label asp-for="ProfilePictureURL" class="control-label"></label>
-                            <input asp-for="ProfilePictureURL" class="form-control" readonly/>
+                            <label asp-for="ProfilePictureURL" class="control-label text-white"></label>
+                            <input asp-for="ProfilePictureURL" class="form-control bg-dark border-warning text-white" readonly />
                             <span asp-validation-for="ProfilePictureURL" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="FullName" class="control-label"></label>
-                            <input asp-for="FullName" class="form-control" readonly/>
+                            <label asp-for="FullName" class="control-label text-white"></label>
+                            <input asp-for="FullName" class="form-control bg-dark border-warning text-white" readonly />
                             <span asp-validation-for="FullName" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label asp-for="Bio" class="control-label"></label>
-                            <input asp-for="Bio" class="form-control" readonly/>
+                            <label asp-for="Bio" class="control-label text-white"></label>
+                            <input asp-for="Bio" class="form-control bg-dark border-warning text-white" readonly />
                             <span asp-validation-for="Bio" class="text-danger"></span>
                         </div>
 
                         <div class="form-group" style="margin-top: 10px">
-                            <a class="btn btn-outline-secondary" asp-action="Index">Show All</a>
+                            <a class="btn btn-outline-warning text-white" asp-action="Index">Show All</a>
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Admin"))
                         {
-                            <a class="btn btn-outline-success float-end" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
+                            <a class="btn btn-warning float-end" asp-action="Edit" asp-route-id="@Model.Id">Edit</a>
                         }
                         </div>
                 </div>
